@@ -781,7 +781,12 @@ public class RomCalc {
 
             }
             if (Roman == true) {
-                System.out.println("Result: " + convertToOutputString(result));
+                if (result <= 0){
+                    System.err.print("Значение равно нулю или меньше!");
+                    return;
+                }else {
+                    System.out.println("Result: " + convertToOutputString(result));
+                }
             } else {
                 System.out.println("Result; " + result);
             }
